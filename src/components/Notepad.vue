@@ -46,7 +46,6 @@
     this.saveNotes()
   }
   function addNote() {
-    console.log(notes)
     let getTime=Number(new Date().getTime())
     
     // console.log(JSON.parse(localStorage.getItem("notes")||""))
@@ -67,7 +66,11 @@
 </script>
 
 
-<style>
+<style scoped>
+.n-button{
+    font-weight: bold;
+    font-family: '微软雅黑';
+}
 .title {
   display: flex;
   width: 100;
@@ -82,7 +85,8 @@
 }
 .name{
   color: black;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  font-family: '微软雅黑';
 }
 .notes-list {
   display: flex;
@@ -110,8 +114,8 @@
     box-sizing: border-box;
     resize: none;
     font-size: 15px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: #0c0a0a;
+    font-weight: bold;
+    font-family: '微软雅黑';
     background-color: #fbfbfc;
   }
 

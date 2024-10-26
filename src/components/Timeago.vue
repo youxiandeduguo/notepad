@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content">
         {{str}}
     </div>
 </template>
@@ -19,10 +19,6 @@ export default {
     let timestamp=Props.timestamp
     let curtime= changeDate(new Date().getTime())
     let pretime= changeDate(timestamp)
-    console.log("当前时间")
-    console.log(curtime)
-    console.log("过去时间")
-    console.log(pretime)
     let nume=0
     let str=""
     if(curtime.year!=pretime.year){
@@ -58,3 +54,13 @@ export default {
 
 
 </script>
+<style scoped>
+    .content{
+        color: #007bff;
+        font-weight: bold;
+        font-family: '微软雅黑';
+    }
+
+
+
+</style>
