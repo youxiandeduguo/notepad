@@ -10,6 +10,9 @@
       <span>
         <Calendar/>
       </span>
+      <span>
+        <!-- <Time_Plant></Time_Plant> -->
+      </span>
     </span>
     <span class="rightspan">
       <Notepad ref="the_notepad"/>
@@ -28,6 +31,7 @@
   import Countdown from "../components/Countdown.vue";
   import Notepad from "../components/Notepad.vue"
   import Weather from "../components/Weather.vue";
+  import Time_Plant from "../components/TimePlant.vue";
 </script>
 
 <style>

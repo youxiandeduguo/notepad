@@ -131,7 +131,6 @@ export default {
 
 
 <style scoped>
-/* 根盒子 */
 section{
     position: relative;
     color: #007bff;
@@ -140,7 +139,6 @@ section{
     width: 100%;
     
 }
-/* 内部盒子 */
 .date-box{
     position: absolute;
     z-index: 10;
@@ -151,11 +149,10 @@ section{
     width: 100%;
     background-color: #a8d8ea;
     border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     overflow: hidden;
 }
-/* 展开的盒子 */
 .date-box-unfold{
     height: 445px;
 }
@@ -164,7 +161,6 @@ section{
   align-items: center;
   flex-flow: column;
 }
-/* 头部年和月 */
 .year-month{
   display: flex;
   justify-content: space-between;
@@ -176,18 +172,15 @@ section{
   background-color: #e3fdfd;
 }
 
-/* 中间日期和时间盒子 */
 .date-time{
     display: flex;
     width: 100%;
 }
-/* 左边日期选择盒子 */
 .date-select{
     width: 100%;
     padding: 0 20px;
     text-align: center;
 }
-/* 星期一到星期日盒子 */
 .week-box{
     display: grid;
     grid-template-columns: repeat(7,70px);
@@ -200,11 +193,9 @@ section{
     border-radius: 20px;
     transition: all 0.3s ease;
 }
-/* 包裹在星期里的日期 */
 .include-week-day{
     margin-top: 18px;
 }
-/* 星期里日期过渡 */
 .include-week-day-enter-from,
 .include-week-day-leave-to{
     opacity: 0;
@@ -212,16 +203,13 @@ section{
 .include-week-day-enter-active{
     transition: opacity 0.1s ease;
 }
-/* 被选中星期和日期样式 */
 .current-week{
     color: #f5f5f5;
     background-color: #cca8e9;
 }
-/* 当前月所有日期外部盒子 */
 .month-everyday-box{
     overflow: hidden;
 }
-/* 当前月所有日期 */
 .month-everyday{
     display: grid;
     grid-template-columns: repeat(7,70px);
@@ -229,7 +217,6 @@ section{
     grid-row-gap:10px;
     justify-content: space-between;
 }
-/* 当前月所有日期盒子过渡 */
 .month-everyday-enter-from,
 .month-everyday-leave-to{
     transform: translateY(-300px);
@@ -238,7 +225,6 @@ section{
 .month-everyday-leave-active{
     transition: all 0.3s ease;
 }
-/* 所有日期里每一天的盒子 */
 .month-everyday>span{
     padding: 5px 0;
 }
@@ -250,35 +236,46 @@ section{
     cursor: pointer;
     transition: all 0.4s;
 }
-/* 被选中日期样式 */
 .day.select{
     background-color: #cca8e9;
 }
-/* 不是当前月份的日期 */
 .day.notInMonth{
     color:#ff9999;
 }
-/* 时间选择盒子 */
 .time-select{
     display: flex;
     flex-flow: column;
     align-items: center;
-    /* width: 200px; */
     flex: 0 0 200px;
     padding: 0 20px;
 }
 
 
 
-/* 展开折叠按钮 */
-.btn{
+.btn {
     width: 60px;
     height: 8px;
-    margin: 10px 0;
     border-radius: 20px;
     background-color: #c9d6df;
+    transition: transform 0.3s ease;
 }
-/* 日期展开背景遮罩 */
+
+.toggle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    
+}
+
+
+.date-box-unfold .btn {
+    transform: rotate(180deg);
+}
+
+
 .shade{
     position:absolute;
     z-index: 1;
